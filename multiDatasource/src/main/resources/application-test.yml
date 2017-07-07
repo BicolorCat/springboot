@@ -1,0 +1,14 @@
+spring:
+  datasource:
+        primary:
+          url: jdbc:mysql://localhost:3306/biColor
+          name: biColor
+          username: root
+          password: root
+          driver-class-name: com.mysql.jdbc.Driver
+        second:
+          url: jdbc:mysql://localhost:3306/biColor
+          name: biColor
+          username: read
+          password: read
+          driver-class-name: com.mysql.jdbc.Driver

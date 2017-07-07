@@ -1,0 +1,6 @@
+base:
+    name: prod
+
+server:
+    port: 8090
+

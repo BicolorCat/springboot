@@ -1,0 +1,8 @@
+@startuml
+AopUtils -> TransactionAttributeSourcePointcut: canApply
+TransactionAttributeSourcePointcut --> AnnotationTransactionAttributeSource: getTransactionAttributeSource
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: another authentication Response
+@enduml

@@ -1,0 +1,19 @@
+base:
+    name: test
+
+server:
+    port: 9090
+
+## dataSource
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/biColor
+    name: biColor
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+## Mybatis
+mybatis:
+    typeAliasesPackage: sample.dto
+    mapperLocations: classpath:mapper/*.xml

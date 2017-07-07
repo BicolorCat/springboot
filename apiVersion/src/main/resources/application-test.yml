@@ -1,0 +1,5 @@
+base:
+    name: test
+
+server:
+    port: 8080
