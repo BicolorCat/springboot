@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sample.dao.JobDao">
+
+    <insert id="addJobDetail" parameterType="JobDetailDTO">
+    insert into job_detail(id,job_name,job_class_name,cron_expression)
+    value(#{id},#{jobName},#{jobClassName},#{cronExpression})
+    </insert>
+
+</mapper>

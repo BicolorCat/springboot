@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: spirng-boot-rabbitmq-example
+  rabbitmq:
+    host: 127.0.0.1
+    username: color
+    password: color
+    virtual-host: /color
+    port: 5672

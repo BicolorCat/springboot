@@ -3,17 +3,20 @@ base:
 
 server:
     port: 9090
+    jsp-servlet:
+      class-name: org.apache.jasper.servlet.JspServlet
 
 ## dataSource
 spring:
+  application:
+    name: schedule
   datasource:
-    url: jdbc:mysql://localhost:3306/biColor
-    name: biColor
+    url: jdbc:mysql://192.168.1.211:3306/test_quartz
     username: root
-    password: root
+    password: testsql123
     driver-class-name: com.mysql.jdbc.Driver
 
 ## Mybatis
 mybatis:
-    typeAliasesPackage: sample.dto
+    typeAliasesPackage: sample
     mapperLocations: classpath:mapper/*.xml
