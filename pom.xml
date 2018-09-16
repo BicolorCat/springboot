@@ -8,12 +8,22 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<modules>
-		<module>base</module>
         <module>multiDatasource</module>
         <module>muitlmybaitsdruid</module>
         <module>schedule</module>
         <module>redis</module>
         <module>apiVersion</module>
+        <module>elasticsearch</module>
+        <module>starter</module>
+        <module>rocketmq</module>
+		<module>api</module>
+        <module>provider</module>
+        <module>scheduler</module>
+        <module>consumer</module>
+        <module>ForTest</module>
+        <module>rabbitmq</module>
+        <module>spark</module>
+        <module>xxlJob</module>
     </modules>
 	<packaging>pom</packaging>
 

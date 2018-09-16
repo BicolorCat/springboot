@@ -1,5 +1,7 @@
 package sample.datasource;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -14,7 +16,7 @@ import java.util.TreeMap;
  */
 //@Order(-1)
 //@Component
-//@ConfigurationProperties(prefix="spring.datasource")
+@ConfigurationProperties(prefix="spring.datasource")
 public class DatasourceYmlConfig {
 
     private String name;

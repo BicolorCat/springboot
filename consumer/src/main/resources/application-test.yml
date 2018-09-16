@@ -1,0 +1,39 @@
+spring:
+  datasource:
+        names: root,reader
+        root:
+          type: com.alibaba.druid.pool.DruidDataSource
+          url: jdbc:mysql://localhost:3306/biColor
+          username: root
+          password: root
+          driver-class-name: com.mysql.jdbc.Driver
+
+  dubbo:
+      application:
+        name: provider
+      registry:
+        address: zookeeper://127.0.0.1:2181
+      protocol:
+        name: dubbo
+        port: 20880
+      scan: org.spring.springboot.dubbo
+
+druid:
+  filters: stat
+
+
+## Mybatis
+mybatis:
+    typeAliasesPackage: sample.dto
+    mapperLocations: classpath:mapper/*.xml
+
+
+rocket:
+      consumer:
+        namesrvAddr: 127.0.0.1：9876
+        groupName: vehicleProducerGroup
+        instanceName: vehicleProducer
+        topic: TEST
+        tag: TEST
+        consumeThreadMin: 20
+        consumeThreadMax: 64

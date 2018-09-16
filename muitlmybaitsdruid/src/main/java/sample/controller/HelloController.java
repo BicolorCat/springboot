@@ -1,5 +1,6 @@
 package sample.controller;
 
+import example.ExampleService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,10 @@ public class HelloController {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    @Autowired
+    private ExampleService exampleService;
+
+
     @RequestMapping(value = "guys")
     @TargetDataSource(name = "reader")
     public String guys(){
@@ -42,6 +47,7 @@ public class HelloController {
 
     @RequestMapping(value = "world")
     public String hello(){
+        System.out.println(exampleService.wrap("111"));
         return personService.getPersonById("1").getName();
     }
 

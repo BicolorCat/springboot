@@ -2,7 +2,6 @@ package sample.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import sample.datasource.TargetDataSource;
 import sample.dto.PersonDTO;
 
 import java.util.Map;

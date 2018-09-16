@@ -2,6 +2,7 @@ package sample.dynamic.service.impl;
 
 import org.apache.commons.lang3.time.DateFormatUtils;
 import org.quartz.*;
+import org.quartz.impl.StdSchedulerFactory;
 import org.quartz.impl.matchers.GroupMatcher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,8 +30,17 @@ public class JobServiceImpl implements JobService{
 
     private Logger logger = LoggerFactory.getLogger(JobServiceImpl.class);
 
-    @Autowired
-    private Scheduler scheduler;
+    private static Scheduler scheduler;
+
+
+    static {
+        try{
+            scheduler = StdSchedulerFactory.getDefaultScheduler();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
 
     @Override
     public List<TaskInfo> list(){

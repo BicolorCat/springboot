@@ -20,7 +20,7 @@ import java.util.Map;
  * \
  */
 @Service
-public class PersonServiceImpl implements PersonServiceIF{
+public class PersonServiceImpl implements PersonServiceIF {
 
     @Autowired
     private PersonDao personDao;

@@ -1,4 +1,4 @@
-package sample;
+package sample.pay.message;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;

@@ -23,6 +23,7 @@ public class PersonSeriviceImpl implements PersonServiceIF {
 
     @Cacheable(value = "personCache1")
     @CacheDuration(duration = 30)
+    @Override
     public String getNameFromDB() {
         logger.info("~~~~~~~~~logger info~~~~~~~~~~~");
         return "hi";

@@ -15,5 +15,5 @@ spring:
 
 ## Mybatis
 mybatis:
-    typeAliasesPackage: sample.dto
+    typeAliasesPackage: com.dto
     mapperLocations: classpath:mapper/*.xml

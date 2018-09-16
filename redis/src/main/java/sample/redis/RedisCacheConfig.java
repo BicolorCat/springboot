@@ -48,6 +48,7 @@ public class RedisCacheConfig extends CachingConfigurerSupport implements Applic
     private int expire;
 
     @Bean
+    @Override
     public KeyGenerator keyGenerator(){
         return new KeyGenerator() {
             @Override

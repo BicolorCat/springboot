@@ -1,14 +1,9 @@
 package sample.datasource;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.MutablePropertyValues;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.GenericBeanDefinition;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
-import org.springframework.boot.bind.RelaxedPropertyResolver;
-import org.springframework.boot.bind.YamlConfigurationFactory;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.core.env.Environment;
@@ -16,7 +11,6 @@ import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.util.ClassUtils;
 
 import javax.sql.DataSource;
-import javax.xml.crypto.Data;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -96,6 +90,8 @@ public class DynamicDatasourceRegister implements EnvironmentAware,ImportBeanDef
             String username = prop.get("username");
             String password = prop.get("password");
             String driverClassName = prop.get("driver-class-name");
+            Properties properties = System.getProperties();
+            properties.put("druid.filters","stat");
             return DataSourceBuilder.create().type(type).driverClassName(driverClassName).url(url).username(username).password(password).build();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

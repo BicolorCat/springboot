@@ -1,8 +1,5 @@
 package sample.lru;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 /**
  * \* Created with IntelliJ IDEA.
  * \* User: biColor
@@ -14,13 +11,19 @@ import java.util.Map;
  */
 public class LRUCache {
 
+    private final String LOCAL = "127.0.0.1";
+
+    private final String PORT_7000 = "7000";
+    private final String PORT_7001 = "7001";
+    private final String PORT_7002 = "7002";
+    private final String PORT_7003 = "7003";
+    private final String PORT_7004 = "7004";
+    private final String PORT_7005 = "7005";
+
+
+
     public static void main(String[] args) {
-        Map map = new LinkedHashMap<>();
-        map.put(1,1);
-        map.put(2,2);
-        map.put(3,3);
-        map.get(2);
-        map.keySet().forEach(k -> System.out.println(k));
+
     }
 
 }

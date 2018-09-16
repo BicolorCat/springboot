@@ -3,3 +3,4 @@ base:
 
 server:
     port: 8080
+    test: 1_1

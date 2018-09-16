@@ -14,7 +14,18 @@ spring:
           password: reader
           driver-class-name: com.mysql.jdbc.Driver
 
+druid:
+  filters: stat
+
+
 ## Mybatis
 mybatis:
     typeAliasesPackage: sample.dto
     mapperLocations: classpath:mapper/*.xml
+
+
+example:
+  service:
+    enabled: true
+    prefix: 1111
+    suffix: 2222

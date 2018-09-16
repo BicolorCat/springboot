@@ -1,0 +1,30 @@
+server:
+    port: 9090
+
+spring:
+  dubbo:
+    application:
+        name: provider
+    registry:
+        address: zookeeper://127.0.0.1:2181
+    protocol:
+        name: dubbo
+        port: 20880
+    scan: com.pay.message.service
+
+rocketmq:
+      producer:
+    # 发送同一类消息的设置为同一个group，保证唯一,默认不需要设置，rocketmq会使用ip@pid(pid代表jvm名字)作为唯一标示
+        groupName: provider
+        #mq的nameserver地址
+        namesrvAddr: 127.0.0.1：9876
+        #如果需要同一个jvm中不同的producer往不同的mq集群发送消息，需要设置不同的instanceName
+        instanceName: vehicle
+        #topic名称
+        topic: provider
+        #根据实际情况设置消息的tag
+        tag: provider
+        #消息最大长度
+        maxMessageSize: 131072 # 1024*128
+        #发送消息超时时间
+        sendMsgTimeout: 10000
